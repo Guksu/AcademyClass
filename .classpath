@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="chapter01_begin/src"/>
+	<classpathentry kind="src" path="chapter02_variable dateType/src"/>
+	<classpathentry kind="src" path="chapter03_input_operator/src"/>
+	<classpathentry kind="src" path="chapter04_control"/>
+	<classpathentry kind="output" path="chapter01_begin/bin"/>
+</classpath>
