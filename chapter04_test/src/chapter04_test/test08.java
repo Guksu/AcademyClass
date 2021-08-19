@@ -26,19 +26,22 @@ public class test08 {
 		int answer = sc.nextInt();
 		System.out.println("숫자를 입력하시오");
 		int num = sc.nextInt();
+		int count =1;
 		
 		if(answer == num) {
-			System.out.println("Answer!");// + +"번에 성공 !");
+			System.out.println("Answer! 1번에 성공 !");
 		}else {
 			while(answer != num) {
 				if (answer < num) {
 					System.out.println("Down!");
+					num = sc.nextInt();
 				}else if (answer > num) {
 					System.out.println("Up!");
+					num =sc.nextInt();
 				}
-				sc.nextInt();
+			count++;
 			}
-			System.out.println("Answer!");//+ +"번에 성공 !");
+			System.out.println("Answer!"+count +"번에 성공 !");
 		}
 		sc.close();
 	}
