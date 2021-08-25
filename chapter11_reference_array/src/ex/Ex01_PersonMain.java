@@ -5,7 +5,7 @@ public class Ex01_PersonMain {
 
 		Ex01_Person[] people = new Ex01_Person[3]; //배열선언
 		
-		for(int i =0; i<people.length; i++) {      //배열 생성
+		for(int i =0; i<people.length; i++) {      //객체 생성
 			people[i] = new Ex01_Person();
 		}
 		
