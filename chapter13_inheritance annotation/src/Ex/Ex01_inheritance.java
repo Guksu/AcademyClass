@@ -2,11 +2,17 @@ package Ex;
 
 //부모 클래스
 class Parent{
+	int num;
 	
+	void doParent() {
+		System.out.println("doParent() 호출");
+	}
 }
 //자식 클래스
 class Child extends Parent{
-	
+	void doChild() {
+		System.out.println("doChile() 호출");
+	}
 }
 
 public class Ex01_inheritance {
@@ -22,6 +28,10 @@ public class Ex01_inheritance {
 		//@Override(어노테이션의 한 종류)을 붙이면 오버라이드 한 메소드임을 구별할 수 있다.
 		
 		
+		Child child = new Child();
+		
+		child.doChild();
+		child.doParent();
 	}
 
 }
