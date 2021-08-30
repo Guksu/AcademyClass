@@ -19,7 +19,6 @@ class Notebook extends Computer{
 		System.out.println("Notebook");
 	}
 }
-
 public class Ex01_polymorphism {
 	public static void main(String[] args) {
 
@@ -30,6 +29,14 @@ public class Ex01_polymorphism {
 			com[i] = new Computer();
 			note[i] = new Notebook();
 		}	
-	
+
+		Product[] pro = new Product[20];
+		//업캐스팅
+		pro[1] = new Computer();
+		pro[2] = new Notebook();
+		
+		pro[1].info();
+		pro[2].info();
+		
 	}
 }
