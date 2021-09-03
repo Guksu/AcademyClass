@@ -69,7 +69,18 @@ class  WithdrawException extends Exception{
 public class Ex06_exception {
 	public static void main(String[] args) {
 
-		BankAccount acc1 = new BankAccount("1", 1000);
 		
+		BankAccount acc1 = new BankAccount("1", 1000);
+		BankAccount acc2 = new BankAccount("2", 2000);
+
+		try {
+		acc1.transfer(acc2, 2000);
+		acc1.inquiry();
+		acc2.inquiry();
+		} catch (DepositException d) {
+			System.out.println("예금오류 발생 !"+d.getErrCode()+d.getMessage());
+		} catch (WithdrawException w) {
+			System.out.println("출금오류 발생 !"+w.getErrCode()+w.getMessage());
+		}
 	}
 }
