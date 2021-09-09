@@ -1,7 +1,7 @@
 package Test;
 
 interface Car{
-	<T> void info(T obj);
+	 void info();
 }
 
 class Bus<T> implements Car{
@@ -9,9 +9,14 @@ class Bus<T> implements Car{
 	int num;
 	
 	@SuppressWarnings("hiding")
-	@Override
 	public <T>void info(T obj) {
 		System.out.println(obj);
+	}
+
+	@Override
+	public void info() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
@@ -51,7 +56,7 @@ class Taxi implements Car{
 	}
 
 	@Override
-	public <T> void info(T obj) {
+	public void info() {
 		// TODO Auto-generated method stub
 		
 	}	
