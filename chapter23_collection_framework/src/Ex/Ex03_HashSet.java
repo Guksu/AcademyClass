@@ -20,14 +20,11 @@ public class Ex03_HashSet {
 		System.out.println("=========");
 		
 		Iterator<String> itr = set.iterator();
-		
 		while(itr.hasNext()) {
-			String str = itr.next();
-			if(str.equals("Spring")) {
+			if(itr.next().equals("Spring")) {
 				itr.remove();
 			}
 		}
-		System.out.println("============");
 		System.out.println(set);
 	}
 }

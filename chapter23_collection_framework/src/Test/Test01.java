@@ -7,9 +7,9 @@ import java.util.Date;
 class Board{
 	private String title;
 	private String content;
-	private Date register;
+	private String register;
 	
-	public Board(String title, String content, Date register) {
+	public Board(String title, String content, String register) {
 		this.title = title;
 		this.content = content;
 		this.register = register;
@@ -17,12 +17,11 @@ class Board{
 
 	@Override
 	public String toString() {
-		return "[title=" + title + ", content=" + content + ", register=" + register + "]";
+		return "[제목 = " + title + ", 내용 = " + content + ", 날짜 = " + register + "]";
 	}
 
 }
 public class Test01 {
-	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
 //		Q1. Test01.java
 //
@@ -34,13 +33,17 @@ public class Test01 {
 //			private String title;
 //			Private String content;
 //			Private Date register;						// 현재 날짜 자동 삽입
+		
+		
+		//simply가 왜 안 될까
 		ArrayList<Board> arr = new ArrayList<Board>();
-		Date date = new Date();
-		SimpleDateFormat  format1, format2, format3;
-		format1 = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
-		arr.add(new Board("Number1","Game", format1.format(date.getDay()))) ;
-		arr.add(new Board("Number2", "Drama", new Date(2021, 11, 4)));
-		arr.add(new Board("Number3", "Economic", new Date(2022,12,5)));
+		SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
+		String now = format1.format(new Date());
+		arr.add(new Board("Number1","Game", now));
+		arr.add(new Board("Number2", "Drama", now));
+		arr.add(new Board("Number3", "Economic", now));
+		System.out.println(arr);
+		arr.remove(1);
 		System.out.println(arr);
 	}
 }
